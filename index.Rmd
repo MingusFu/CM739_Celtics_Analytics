@@ -489,7 +489,7 @@ E(network)$weight <- transition_freq$Frequency[transition_freq$Frequency >= 5]
 plot(network, edge.label = E(network)$weight)
 ```
 
-![Topic Network Prediction Model](1.png)\\\\
+![Topic Network Prediction Model](8.jpg)\\\\
 
 
 ### 3.3.2 Insights
