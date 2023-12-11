@@ -1,0 +1,5 @@
+name: "Prof. Katy's CM739 Final Project: Campaign For Boston Celtics"
+output:
+  html_document:
+    css: st.css
+    highlight: textmate
