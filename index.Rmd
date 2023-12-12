@@ -178,10 +178,6 @@ toptopics$document<-as.numeric(toptopics$document)
 data <- left_join(data, toptopics, by = "document")
 ```
 
-### Insights
-
-Generally, tweets that focus on fan and community engagement tend to have a higher average daily reach compared to other tweets, although these differences are not significant.
-
 ## 1.3 Daily Reach/Sentiment by Significant Topic
 
 ```{r}
@@ -201,6 +197,10 @@ t.test(fan$sentiment,other_topic$sentiment,paired=FALSE,alternative="greater")
 t.test(fan$Daily_Reach,other_topic$Daily_Reach,paired=FALSE,alternative="greater")
 
 ```
+
+### Insights
+
+Generally, tweets that focus on fan and community engagement tend to have a higher average daily reach compared to other tweets, although these differences are not significant.
 
 ## 1.4 Sentiment Transition by Significant Topic
 
@@ -349,9 +349,11 @@ data <- data %>%
 
 ### Insights
 
-- **Day and Daily Reach**: as the days progress, the daily reach tends to decrease.
-- **Likes and Daily Reach**: Tweets with more likes tend to have a clearly higher daily reach.
-- **Replies and Daily Reach**: Tweets with more replies are associated with more likes.
+- **Overall Reach and Likes**: Likes amounts are highly positively associated with overall reach.
+
+- **Overall Reach and Replies**: Replies amounts are highly positively associated with overall reach.
+
+- **Sentiment**: Surprisingly, sentiments scores have almost no correlations with any other significant social media matrics.
 
 ### What is actionable
 
@@ -449,8 +451,9 @@ transitions <- data %>%
 
 ### Insights
 
-- **Daily Reach**: Daily Reach peaks in 2023.06 and 2023.08.
-- **Replies, Likes \& Daily Reach**: The peak in replies starts three months before the peak in likes, and the peaks in likes and daily reach occur simultaneously.
+- **Reach**:  Reach peaks from 2023.05 to 2023.08.
+
+- **Replies, Likes \& Daily Reach**: The peak in replies starts three months before the peak in likes, which might plays a predictor roles in leading to the peaks of likes and overall reach.
 
 # 3. A pre-playoff Twitter/X Campaign Proposal Given Above Insights:
 
